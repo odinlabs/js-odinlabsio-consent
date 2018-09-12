@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/odinlabs/js-odinlabsio-sdk/issues"
   },
-  "homepage": "https://github.com/odinlabs/js-odinlabsio-sdk#readme"
+  "homepage": "https://github.com/odinlabs/js-odinlabsio-sdk#readme",
+  "dependencies": {
+    "jsonwebtoken": "^8.3.0",
+    "node-rest-client": "^3.1.0",
+    "passport-oauth2": "^1.4.0"
+  }
 }
