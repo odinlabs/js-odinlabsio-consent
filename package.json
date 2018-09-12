@@ -1,0 +1,22 @@
+{
+  "name": "odin-sdk",
+  "version": "1.0.0",
+  "description": "odin sdk (consent, authentification, etc)",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odinlabs/js-odinlabsio-sdk.git"
+  },
+  "author": "awalga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/odinlabs/js-odinlabsio-sdk/issues"
+  },
+  "homepage": "https://github.com/odinlabs/js-odinlabsio-sdk#readme"
+}
