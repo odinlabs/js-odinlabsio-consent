@@ -1,1 +1,1 @@
-# js-odinlabsio-consent
+# js-odinlabsio-sdk
