@@ -61,10 +61,10 @@ const ConsentServerInstance = new ConsentServer(passport, function (user, permis
     return cb(null, user, permission);
   }, params);
 ```
-ConsentServer args are passport, a verification function (user, permission, cb) { ... }) and server params.
+ConsentServer args are `passport`, a verification `function (user, permission, cb) { ... })` and server `params`.
 Verification function will be passed user and permission. user is defined if authenfication or consent request was succesfull. permission is defined if consent request was succesfull.
 Client code can serialize or save to db user and permission for later usage.
-cb is a callback funtion (err, user, permission). client Code must call this function with user, permission or values derived from user, permission.
+`cb` is a callback `funtion (err, user, permission)`. client Code must call this function with `user`, `permission` or values derived from `user`, `permission`.
 
 ### Verifiable authentification
 Authentify is an express middleware.
@@ -80,8 +80,8 @@ app.get('/odinsdk/callback/authentification', ConsentServerInstance.authentify()
   });
 ```
 Options:
-- succesRedirect: redirect path if authentification succeeds (default to: request.originalUrl)
-- failureRedirect: redirect path if authentification fails
+- `succesRedirect`: redirect path if authentification succeeds (default to: request.originalUrl)
+- `failureRedirect`: redirect path if authentification fails
 
 ### Verifiable consent collection
 Consent is an express middleware.
@@ -96,12 +96,12 @@ app.get('/odinsdk/callback/consent', ConsentServerInstance.consent(), function (
   });
 ```
 Options:
-- succesRedirect: redirect path if authentification succeeds (default to: request.originalUrl)
-- failureRedirect: redirect path if authentification fails
+- `succesRedirect`: redirect path if authentification succeeds (default to: request.originalUrl)
+- `failureRedirect`: redirect path if authentification fails
 
 ### Collect consent once
 
-User data and consent data are stored in user sessions and are added to request.user and request.session.odinsdk.permission respectively.
+User data and consent data are stored in user sessions and are added to `request.user` and `request.session.odinsdk.permission` respectively.
 
 #### Collect consent for a single session
 
@@ -122,8 +122,8 @@ app.get('/odinsdk/callback/consent', ConsentServerInstance.consent(), function (
 ```
 #### Collect consent once for cross session permission
 
-Collect cross session eg. we want to collect consent if consent has never been collected for current.
-To do this perform a two step authentification-consent. Authenfitication returns user and lookup for pervious consent based on user. If a consent exist return previousConsent this will skip the collect consent  step else will perform collect consent step.
+Collect cross session eg. we want to collect consent if consent has never been collected for current session.
+To do this perform a two step authentification-consent. Authenfitication returns user and lookup for pervious consent based on user. If a consent exist return previousConsent this will skip the collect consent step else will perform collect consent step.
 
 ```
 const ConsentServerInstance = new ConsentServer(passport, function (user, permission, cb) {
