@@ -6,6 +6,12 @@ Welcome to OdinLabs IO.
 
 - [Overview](#overview)
   - [Quick Summary](#quick-summary)
+- [Install](#install)
+- [Usage](#usage)
+  - [Configure](#configure)
+  - [Collect consent once](#collect-consent-once)
+  - [Verifiable consent collection](#verifiable-consent-collection)
+  - [Verifiable authentification](#verifiable-authenfitication)
 - [How it works](#how-it-works)
   - [Authentification](#authentification)
   - [Signed Consent Collection](#signed-consent-collection)
